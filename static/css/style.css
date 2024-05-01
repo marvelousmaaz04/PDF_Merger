@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    ;
+    list-style-type: none;
+
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --theme: rgb(50, 180, 231);
+    --themeDark: rgb(0, 183, 255);
+
+    /* --theme: rgb(255, 255, 0);
+    --theme: rgb(255, 166, 0);
+    --theme: rgb(0, 255, 0); */
+}
+
+
+
+.logo {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 600;
+}
+
+header {
+    background-color: var(--theme);
+    font-size: 20px;
+    height: fit-content
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+
+}
+
+.description {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 20px;
+}
+
+.description ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description ul li {
+    margin-right: 1.3rem;
+}
+
+.file-zone {
+    min-height: 25rem;
+    max-height: max-content;
+    width: 70rem;
+    background-color: var(--theme);
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border: 5px dashed rgb(7, 7, 7);
+    border-radius: 15px;
+}
+
+.download-pdf {
+    height: 15rem;
+    width: 50rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+
+    border: 5px dashed rgb(7, 7, 7);
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem;
+
+}
+
+.file-name {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#download {
+    margin-top: 1rem;
+    background-color: var(--theme);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    color: black;
+}
+
+#download:hover {
+    cursor: pointer;
+    background-color: var(--themeDark);
+
+}
+
+
+.file-zone .choose-files {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: white
+}
+
+.choose-files:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: auto;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    background-color: var(--theme);
+    margin-top: 2rem;
+}
+
+.uploaded-file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 0.4rem;
+}
+
+.thumbnail {
+    width: 4.5rem;
+    /* Adjust width as needed */
+    height: 8rem;
+    /* Maintain aspect ratio */
+    border: 1px solid #ccc;
+
+    padding: 0.8rem;
+
+    background-color: rgb(158, 155, 155);
+}
+
+.file-zone {
+    position: relative;
+}
+
+.add-files {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: white;
+}
+
+.add-files:hover {
+    cursor: pointer;
+}
+
+.add-files:hover::before {
+    content: "Add file";
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+.merge-files {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#merge {
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    background-color: var(--theme);
+    border-radius: 35px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#merge:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#restart {
+    font-size: 1.2rem;
+
+    margin-top: 1.5rem;
+
+    background-color: rgb(219, 100, 100);
+    padding: 0.4rem;
+    border: unset;
+    border-radius: 10px;
+}
+
+#restart:hover {
+    cursor: pointer;
+
+    background-color: rgb(241, 84, 84);
+
+}
+
+#toggle {
+    color: white;
+    position: relative;
+    /* Add this line */
+}
+
+#toggle::after {
+    content: "Change Theme";
+    /* Add this line */
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    font-size: 1rem;
+    visibility: hidden;
+    /* Initially hide the tooltip */
+}
+
+#toggle:hover::after {
+    visibility: visible;
+    /* Show the tooltip on hover */
+}
+
+#toggle:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1280px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .file-zone {
+        width: 80%;
+    }
+
+    .download-pdf {
+        width: 70%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .file-zone .choose-files {
+        height: 2rem;
+        width: 10rem;
+        font-size: 1rem;
+
+    }
+
+    #restart {
+        font-size: 0.8rem;
+    }
+
+    .uploaded-file {
+
+        font-size: 0.7rem;
+
+    }
+
+    #merge {
+        height: 2.5rem;
+        width: 6rem;
+        font-size: 1rem;
+    }
+
+    .thumbnail {
+        height: 5rem;
+        width: 3rem;
+    }
+
+}

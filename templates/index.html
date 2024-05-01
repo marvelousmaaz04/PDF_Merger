@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">YPDF</li>
+                <!-- <li><img src="{{url_for('static',filename='icons/website_logo.png')}}" height="42px" alt="logo"></li> -->
+                <li><i class="fa-solid fa-palette" id="toggle"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="description">
+        <h1>Merge PDF Files</h1>
+        <p>Combine or join multiple files into a single PDF quickly and easily</p>
+        <div>
+            <ul>
+                <li><i class="fa-solid fa-check" style="color: #55bb37;"></i> Free</li>
+                <li><i class="fa-solid fa-check" style="color: #55bb37;"></i> Online</li>
+                <li><i class="fa-solid fa-check" style="color: #55bb37;"></i> No limits</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="file-zone">
+        <div class="choose-files" id="choose-files">
+            <p>Choose files</p>
+        </div>
+        <div class="add-files" id="add-files">
+            <img src="{{url_for('static',filename='icons/add-files-icon.png')}}" height="32px" width="32px" alt="">
+        </div>
+    </section>
+
+    <section class="merge-files" id="merge-files">
+        <div id="merge">Merge</div>
+        <!-- dont use onclick here because the function is declared after the dom content has been loaded -->
+    </section>
+
+    <section class="download-pdf" id="download-pdf">
+        <h3>YPDF has merged your files into a single PDF.</h3>
+
+        <p class="file-name"></p>
+
+        <div class="download" id="download"><img src="{{url_for('static',filename='icons/downloads.png')}}" width="24px"
+                alt="Download">
+            <a id="download-link" href="{{url_for('static',filename='merged_pdfs/ypdf_merged.pdf')}}" download>&nbsp;
+                Download </a>
+
+
+
+        </div>
+        <button type="button" id="restart"><i class="fa-solid fa-rotate-right"></i> Restart</button>
+    </section>
+
+    <footer class="footer">
+        &COPY; YPDF. All Rights Reserved.
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+<script src="{{url_for('static',filename='javascript/script.js')}}"></script>
+
+</html>
